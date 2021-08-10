@@ -13,8 +13,6 @@ export default window.onload = async () => {
 
   renderQuestions(quizApp, crtAns, triviaQuestions, currentRank);
 
-  let quizForm = document.querySelector('#triviaForm')
-
   activateQuiz(quizApp, activate);
 
 }
