@@ -1,0 +1,50 @@
+ .dskNavUL {
+        display: none;
+        justify-self: flex-end;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-around;
+        width: fit-content;
+        height: $calibLg;
+
+        .dskNavLI {
+          background-color: $green;
+          flex-grow: 1;
+          text-align: center;
+          line-height: 3.2;
+          min-width: 70px;
+          height: $calibLg;
+          transition: color 0.2s ease-in-out;
+
+          a {
+            font-size: 1.2rem;
+          }
+
+          &:hover {
+            cursor: pointer;
+            color: lighten($yellow, 20%);
+            text-shadow: 0 0 5px rgba(242, 183, 5, 0);
+
+
+          }
+
+        }
+
+        .first {
+          display: block;
+          content: "";
+          height: $calibLg;
+          border-radius: $radiusLg 0 0 $radiusLg;
+          width: $calibSm;
+          background-color: $green;
+        }
+
+        .last {
+          display: block;
+          height: $calibLg;
+          border-radius: 0 0 $radiusLg 0;
+          content: "";
+          width: $calibSm;
+          background-color: $green;
+        }
+      }

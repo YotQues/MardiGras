@@ -1,0 +1,29 @@
+.galleryPicsSm {
+  display: grid;
+  grid-template-columns: repeat(2, 40vw);
+  grid-template-rows: repeat(6, 40vw);
+  grid-gap: 5vw;
+  margin: 0 7.5vw;
+  // display: none;
+
+  .galItem {
+    display: block;
+    width: 40vw;
+    height: 40vw;
+    overflow: hidden;
+    border-radius: 2vw;
+    box-shadow: 0 0.25vw 0.5vw #000;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0.5vw 1vw #000;
+      cursor: pointer;
+    }
+
+    img {
+      height: inherit;
+    }
+  }
+
+  @import "picsSmQueries";
+}

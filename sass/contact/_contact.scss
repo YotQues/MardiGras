@@ -1,0 +1,17 @@
+$warning: var(--yellow);
+$success: var(--success);
+
+#contactInfo {
+  display: flex;
+  flex-direction: column-reverse;
+
+  .seperator {
+    .secHeader {
+      width: 132px;
+      z-index: 0;
+      @include xxsBP {
+        width: 96px;
+      }
+    }
+  }
+}

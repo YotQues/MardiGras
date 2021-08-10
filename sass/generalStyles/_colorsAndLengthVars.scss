@@ -1,0 +1,27 @@
+// variables
+
+// Colors
+$green:#3AB34D;
+$brightGreen:#76bf2c;
+$ltBlue:#17A2B8;
+$turquise:#7ae1bf;
+$purple:#9c53a6;
+$yellow:#f2b705;
+$danger:#e4002b;
+$light:#f2f2f2;
+$dark: var(--dark);
+$bgDark:#343A40;
+$bgFooter:rgba(242, 242, 242, 0.4);
+$primary: var(--primary);
+
+
+
+
+// lengthUnits and R's
+$calibSm: 30px;
+$calibMd: 46px;
+$calibLg: 60px;
+
+$radiusSm: $calibSm / 2;
+$radiusMd: $calibMd / 2;
+$radiusLg: $calibLg / 2;

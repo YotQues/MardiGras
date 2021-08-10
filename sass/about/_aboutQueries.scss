@@ -1,0 +1,46 @@
+@include xxsBP {
+  .seperator {
+    .horChain {
+      width: 136px;
+    }
+  }
+}
+
+@include xsBP {
+  .horChain {
+    width: 170px;
+  }
+}
+@include smBP {
+  .seperator {
+    .horChain {
+      width: fit-content;
+    }
+    &#innerSep {
+      justify-content: space-between;
+      .fChain {
+        display: flex;
+      }
+    }
+  }
+}
+@include tbBP {
+  .seperator#sepMayor {
+    .horChain {
+      display: flex;
+    }
+  }
+  p {
+    img#mayor {
+      margin-top: 0;
+    }
+  }
+}
+@include smDskBP {
+  font-size: 1.32rem;
+  p {
+    img#mayor {
+      width: 16vw;
+    }
+  }
+}

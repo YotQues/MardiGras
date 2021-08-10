@@ -1,0 +1,228 @@
+$tpRtLt: 76px;
+$tpLtFstClWth: 76px;
+$hamHgt: 52px;
+$rtChStpHgt: 68px;
+
+$scroll: var(--scroll);
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  font-family: 'Pattaya', sans-serif;
+  width: 100vw;
+
+  nav {
+    width: 100vw;
+    color: $light;
+
+
+    //  Top Left Corner
+
+    @import "frame/topLeftCorner";
+
+    //  Top Right Corner 
+
+    .topRightCorner {
+
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 90px;
+      overflow: visible;
+      display: grid;
+      transition: all 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+      grid-template: {
+        columns: auto $calibSm;
+        rows: $calibSm $rtChStpHgt auto;
+      }
+
+      ;
+      grid-template-areas: "lnSel cross"
+      "ham chainR"
+      ". chainR"
+      ;
+
+     @import "trivia/triviaDiv";
+
+      .crossR {
+        z-index: 1004;
+        grid-area: cross;
+        content: "";
+        width: $calibSm;
+        height: $calibSm;
+        background: linear-gradient(-45deg, $purple 49.5%, $yellow 50%);
+      }
+
+      .chainR {
+        grid-area: chainR;
+        @include chain;
+        z-index: 1004;
+        min-height: 3 * $calibSm;
+        height: 20vh;
+
+
+        .chainStripR {
+          height: 5vh;
+          border-radius: 0 0 $radiusSm $radiusSm;
+          background-image: linear-gradient(180deg, $purple 0%, $purple 60%, $green 100%);
+        }
+
+        .chainOb1 {
+          background-color: $yellow
+        }
+
+        .chainOb2 {
+          background-color: $green;
+        }
+
+        .chainOb3 {
+          background-color: $danger;
+        }
+
+        .chainOb4 {
+          background-color: $ltBlue;
+        }
+
+      }
+
+      // Menu
+
+     @import "frame/menuMob";
+
+     @import "frame/deskMenu";
+
+      // rCorner media queries
+
+      @include xxsBP {
+        position: fixed;
+        right: -30px;
+        top: 0;
+      }
+
+      @include smDskBP {
+        transform: translate(-$calibSm, $calibSm);
+
+        grid-template: {
+          columns: auto $calibSm;
+          rows: $calibSm auto auto;
+        }
+
+        ;
+        grid-template-areas: " lnSel cross"
+        " ham chainR"
+        ". chainR"
+        ;
+
+        .triviaDiv {
+          grid-area: lnSel;
+          justify-self: end;
+
+        }
+
+        .crossR {
+          grid-area: cross;
+
+        }
+
+        .chainStripR {
+          grid-area: chainR;
+
+        }
+
+        .menuMob {
+          display: none;
+        }
+
+        .dskNavUL {
+          grid-area: ham;
+          display: flex;
+          flex-flow: row;
+          justify-content: flex-end;
+          width: fit-content;
+
+        }
+
+      }
+
+    }
+
+  }
+}
+
+@include xxsBP {}
+
+
+@include xsBP {}
+
+div.topRightCorner.isScrolled.isCollapsed {
+
+  @include xxsBP {
+    height: 90px;
+    transform: translateX(0);
+
+    .menuMob {
+
+      .hamShown {
+        &+.dropDownMenu {
+          transform: translateX(calc(-100vw - 30px))
+        }
+      }
+    }
+  }
+
+
+  @include xsBP {
+    height: 90px;
+    transform: translateX($calibSm);
+
+    .menuMob {
+
+      .hamShown {
+        &+.dropDownMenu {
+          transform: translateX(calc(-100vw - 30px))
+        }
+      }
+    }
+
+  }
+
+  @include smDskBP {
+    transform: translateX(0);
+  }
+
+}
+
+
+
+div.topRightCorner.isScrolled.notCollapsed {
+  transform: translateX(0);
+
+  /*    @include smDskBP {
+      transform: translateX(0);
+    } */
+}
+
+
+
+// container
+.content {
+  position: relative;
+  width: 100vw;
+  // max-width: 1200px;
+  // grid-area: content;
+  color: $light;
+  overflow: shown;
+
+  min-height: calc(90vh);
+
+
+  @include lgDskBP {
+    margin: 0 auto;
+  }
+}
+
+// footer
+@import "frame/footer";

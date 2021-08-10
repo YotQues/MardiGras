@@ -1,0 +1,64 @@
+@include xxsBP {
+  .galItem {
+    iframe {
+      height: 20vh;
+    }
+  }
+}
+@include smBP {
+  padding: 0 $radiusSm;
+  width: calc(100vw - $calibSm);
+  height: fit-content;
+  grid-template-columns: repeat(2, 46vw);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 3vw;
+
+  .galItem {
+    margin: 0;
+    width: 46vw;
+    height: calc(46vw * 9 / 16);
+    iframe {
+      width: 46vw;
+      height: auto;
+      margin: 0;
+    }
+  }
+}
+@include tbBP {
+}
+@include smDskBP {
+  grid-template-columns: repeat(3, 30vw);
+  grid-template-rows: 1fr;
+  grid-gap: 3vw;
+
+  .galItem {
+    width: 30vw;
+    height: calc(30vw * 9 / 16);
+    iframe {
+      width: 30vw;
+      height: calc(30vw * 9 / 16);
+      margin: 0;
+    }
+    &:last-child {
+      grid-area: 2 / 2 / auto / span 1;
+    }
+  }
+}
+@include lgDskBP {
+  grid-template-columns: repeat(4, 22vw);
+  grid-template-rows: 1fr;
+  grid-gap: 3vw;
+
+  .galItem {
+    width: 22vw;
+    height: calc(22vw * 9 / 16);
+    iframe {
+      width: 22vw;
+      height: calc(22vw * 9 / 16);
+      margin: 0;
+    }
+    &:last-child {
+      grid-area: auto;
+    }
+  }
+}

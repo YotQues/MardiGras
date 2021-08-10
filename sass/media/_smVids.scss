@@ -1,0 +1,28 @@
+#vidSep {
+  // height: fit-content;
+  // margin-bottom: 7px;
+  z-index: 0;
+}
+
+.smVids {
+  // margin: 0 $radiusSm;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5vw;
+
+  justify-content: center;
+  // align-items: center;
+
+  .galItem {
+    // margin: 0 7.5vw;
+    display: flex;
+    justify-content: center;
+
+    iframe {
+      height: 40vw;
+      width: inherit;
+    }
+  }
+  @import "smVidsQueries";
+}

@@ -1,0 +1,210 @@
+.sponsorContain {
+  @include xxsBP {
+  }
+
+  @include xsBPWlimit {
+  }
+}
+
+@include xxsBP {
+  .lgCards {
+    .card {
+      width: 14rem;
+      font-size: 0.8rem;
+      margin-left: calc((100vw - 14rem) / 2);
+    }
+  }
+  .sponsorContain {
+    .card {
+      width: 8rem;
+      transition: all 0.1s ease-in-out;
+
+      .cardImg {
+        height: calc(8rem * 2 / 3);
+      }
+
+      .card-body.card-header {
+        .card-text {
+          display: none;
+        }
+      }
+
+      .card-body.card-header {
+        display: block;
+        margin: 0;
+        padding: 0;
+        height: 0;
+
+        .card-title {
+          padding: 0;
+          margin: 0;
+          position: absolute;
+          bottom: 0;
+          width: fit-content;
+          background-color: rgba(0, 0, 0, 0.5);
+          font-size: 1rem;
+        }
+      }
+
+      .card-body {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include xsBPWlimit {
+  .sponsorContain {
+    .card {
+      transition: all 0.1s ease-in-out;
+
+      .card-body {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .card-body.card-header {
+        display: block;
+        margin: 0;
+        padding: 0;
+        height: 0;
+
+        .card-title {
+          padding: 0;
+          margin: 0;
+          position: absolute;
+          bottom: 0;
+          width: fit-content;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .card-text {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .lgCards {
+    .card {
+      width: 18rem;
+      margin-left: calc((100vw - 18rem) / 2);
+
+      .cardImg {
+        height: calc(18rem * 2 / 3);
+      }
+    }
+  }
+}
+
+@include smBP {
+  .sponsorContain {
+    grid-template: {
+      columns: repeat(3, 1fr);
+    }
+
+    grid-gap: 0.7rem;
+
+    .card {
+      width: 15rem;
+      color: $primary;
+
+      .cardImg {
+        height: calc(15rem * 2 / 3);
+      }
+
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .card-body.card-header {
+        margin: 0;
+        padding: 0;
+        height: 0;
+
+        .card-title {
+          padding: 0;
+          margin: 0;
+          position: absolute;
+          bottom: 104px;
+          width: fit-content;
+          background-color: rgba(0, 0, 0, 0.5);
+          color: $light;
+        }
+
+        .card-text {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .lgCards {
+    display: none;
+  }
+}
+
+@include tbBP {
+  .sponsorContain {
+    grid-gap: 0.7rem;
+
+    .card {
+      .card-body.card-header {
+        margin: default;
+        padding: 0.75rem 1.25rem;
+        height: fit-content;
+        background-color: #fff;
+
+        .card-title {
+          margin-bottom: 0.75rem;
+          position: relative;
+          bottom: 0;
+          background-color: #fff;
+          color: $dark;
+        }
+
+        .card-text {
+          display: block;
+          background-color: #fff;
+          font-size: 1rem;
+          text-align: justify;
+        }
+      }
+
+      ul.list-group {
+        font-size: 1rem;
+        display: block;
+      }
+    }
+  }
+}
+
+@include smDskBP {
+  .sponsorContain {
+    grid-gap: 1.5rem;
+    .card {
+      width: 18rem;
+      .card-header {
+        .card-title {
+          text-align: center;
+        }
+      }
+      .cardImg {
+        .cardImg {
+          height: calc(18rem * 2 / 3);
+        }
+      }
+    }
+  }
+}
+
+@include lgDskBP {
+  .sponsorContain {
+    grid-gap: 2rem;
+  }
+}

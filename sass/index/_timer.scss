@@ -1,0 +1,203 @@
+// Special Variables 
+$timValW: 16px;
+$timValH: 9px;
+
+$timWdthSm: calc(100vw - 60px);
+$timHtSm: calc($timWdthSm * 20 / 9);
+
+.countOff {
+  z-index: -1;
+  position: relative;
+  width:
+    calc(100vw - 60px);
+  height: 40vh;
+
+  margin: {
+    top: $calibSm;
+    bottom: 0;
+    left: auto;
+    right: auto;
+  }
+
+  ;
+
+  background-image: url("images/gallery/SkullMup(1).jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 0.2rem;
+  overflow: hidden;
+
+  .timer {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 120px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+      "head head head head "
+      "d h m s"
+    ;
+
+    padding: {
+      left: 12px;
+      right: 12px;
+    }
+
+    ;
+    background-color: $purple;
+    box-shadow: 0 0px 50px rgba(0, 0, 0, 0.8);
+
+
+    strong {
+      grid-area: head;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+    }
+
+    .timrInput {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .value {
+        width: 4 * $timValW;
+        height: 4 * $timValH;
+        background-color: $light;
+        border-radius: 0.5rem;
+        text-align: center;
+        font-size: 1.5rem;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      span {
+        display: block;
+        font-weight: 500;
+      }
+    }
+
+    .days {
+      grid-area: d;
+
+      .value {}
+
+      span {}
+    }
+
+    .hours {
+      grid-area: h;
+
+      .value {}
+
+      span {}
+    }
+
+    .mins {
+      grid-area: m;
+
+      .value {}
+
+      span {}
+    }
+
+    .secs {
+      grid-area: s;
+
+      .value {}
+
+      span {}
+    }
+  }
+
+  @include xxsBP {
+    margin-top: 75px;
+    height: fit-content;
+    width: fit-content;
+
+
+    .timer {
+      width: $timWdthSm;
+      height: $timHtSm;
+
+      strong {
+        font-size: 1rem;
+
+      }
+
+      .timrInput {
+
+        .value {
+          width: 3 * $timValW;
+          height: 3 * $timValH;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  @include xsBP {}
+
+  @include smBP {
+
+    height: calc(95vh - 30px);
+    background-size: fill;
+    background-position: center;
+
+    .timer {
+      width: 315px;
+      margin-bottom: 5vh;
+      border-radius: 0.5rem;
+    }
+  }
+
+  @include tbBP {
+    height: 50vh;
+  }
+
+  @include smDskBP {
+    width: 70vw;
+    margin-top: $calibLg;
+    border-radius: 1rem;
+
+    .timer {
+      width: 500px;
+      height: 225px;
+      margin-bottom: auto;
+      margin-top: 10vh;
+
+      strong {
+        font-size: 2.3rem;
+      }
+
+      .timrInput {
+        .value {
+          width: 7 * $timValW;
+          height: 7 * $timValH;
+        }
+
+        span {
+          font-size: 1.8rem;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+
+  @include lgDskBP {
+    .timer {
+      .timrInput {
+        .value {}
+      }
+    }
+  }
+}

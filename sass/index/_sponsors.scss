@@ -1,0 +1,41 @@
+.sponsorSection {
+  display: flex;
+  flex-direction: column-reverse;
+
+  .seperator {
+    position: relative;
+  }
+
+  .sponsorContain {
+    margin: 0 auto;
+    display: grid;
+
+    grid-template: {
+      columns: repeat(2, 1fr);
+    }
+
+    grid-gap: 0.7rem;
+
+    .card {
+      width: 11rem;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 3px 4px #000;
+      }
+
+      .cardImg {
+        height: calc(11rem * 2 / 3);
+      }
+
+      ul.list-group {
+        font-size: 0.8rem;
+        display: none;
+      }
+    }
+  }
+  @import "lgCards";
+
+  @import "sponsorsQueries";
+}

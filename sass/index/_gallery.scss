@@ -1,0 +1,138 @@
+.galSection.contain {
+  display: flex;
+  flex-direction: column-reverse;
+
+  .seperator {
+    position: relative;
+  }
+
+  .gallery {
+    overflow: shown;
+
+    .flickity-page-dots {
+      bottom: 0px;
+
+      .dot {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        background: transparent;
+        border: 2px solid white;
+
+        &.is-selected {
+          background: white;
+        }
+      }
+    }
+
+    .gallery-cell {
+      width: 90vw;
+      counter-increment: gallery-cell;
+      height: inherit;
+      display: flex;
+      justify-content: center;
+      border-radius: 1rem;
+
+
+      overflow: {
+        y: hidden;
+      }
+
+      ;
+
+      img {
+        width: inherit;
+        transform: scale(0.85);
+        filter: blur(5px);
+        transition: opacity 0.4s ease-in-out,
+          transform 0.4s ease-in-out,
+          filter 0.4s ease-in-out,
+          box-shadow 0.4s ease-in-out;
+        border-radius: 1rem;
+      }
+
+      &.is-selected img {
+        opacity: 1;
+        transform: scale(1);
+        filter: none;
+
+      }
+
+      .crslCaption {
+        width: 60%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.5);
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        display: none;
+        position: absolute;
+        top: 75%;
+        margin: 0 auto;
+        padding-top: 8px;
+
+        p {
+          text-align: center;
+
+          a {
+            text-decoration: blue;
+          }
+        }
+      }
+    }
+
+    @include xxsBP {
+      .gallery-cell {
+        height: 170px;
+      }
+    }
+
+    @include xsBP {
+      height: calc(90vw * 2 / 3);
+    }
+
+    @include smBP {
+      height: 100vh;
+
+      .gallery-cell {
+        width: calc(100vh * 3 / 2);
+      }
+    }
+
+    @include tbBP {
+      width: 100vw;
+      height: 500px;
+      position: relative;
+      margin: 0 auto;
+
+      .gallery-cell {
+        width: calc(500px * 3 / 2);
+
+        .crslCaption {
+          display: flex;
+        }
+      }
+    }
+
+    @include smDskBP {}
+
+    @include lgDskBP {
+      width: 100%;
+      height: 680px;
+      overflow: shown;
+
+      .gallery-cell {
+        width: calc(680px * 3 / 2);
+      }
+    }
+  }
+}
+
+/* .gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  // background: #8C8;
+  counter-increment: gallery-cell;
+}
+ */

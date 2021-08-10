@@ -1,0 +1,182 @@
+ .menuMob {
+        grid-area: ham;
+        display: flex;
+        justify-content: flex-end;
+
+        .dropDownMenu {
+          position: absolute;
+          right: -100vw;
+          top: 0;
+          z-index: 1003;
+          width: 100vw;
+          height: 100vh;
+          background-color: $bgDark;
+          transition: all 0.4s ease-in-out;
+          padding: 0;
+          overflow: hidden;
+
+
+
+          .mobNavUL {
+            margin: {
+              left: $calibSm;
+              top: $calibSm * 3;
+            }
+
+            z-index: 1001;
+
+            .mobNavLI {
+              width: fit-content;
+              @include loginTxSyle;
+              font-size: 1.8rem;
+              text-align-last: left;
+              margin-bottom: $radiusSm;
+              transition: all 0.1s ease-in;
+
+              &:hover,
+              &:focus {
+                color: $yellow;
+                transform: translateX($radiusSm);
+                padding-left: $radiusSm;
+                cursor: pointer;
+              }
+            }
+
+            @include smBP {
+              margin: {
+                left: 0;
+                top: $calibSm * 5;
+              }
+
+              ;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-evenly;
+              align-items: center;
+
+              .mobNavLI {
+                font-size: 1.5rem;
+              }
+            }
+
+            @include tbBP {
+              margin: {
+                left: $calibSm;
+                top: $calibSm * 3;
+              }
+
+              ;
+              display: block;
+
+              .mobNavLI {
+                font-size: 3rem;
+              }
+
+            }
+          }
+
+          .dDownfooter {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            background-color: $bgDark;
+            z-index: 1004;
+            margin: 0;
+            padding: 0;
+            height: $calibLg;
+
+            .social {
+              height: $calibLg;
+              width: 272px;
+              background-color: $danger;
+              border-radius: $radiusLg $radiusLg $radiusLg 0;
+              display: grid;
+              grid-template-columns: repeat(5, 1fr);
+              grid-template-rows: auto;
+              align-items: center;
+              justify-items: space-evenly;
+
+
+              .socItem {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transform: rotate(90deg);
+
+                a {
+
+                  line-height: 1;
+
+                  img {
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover,
+                    &:focus {
+                      color: $yellow;
+                    }
+                  }
+                }
+
+              }
+
+            }
+          }
+
+          @include xxsBP {
+            position: fixed;
+            top: 0;
+          }
+        }
+
+        .ham {
+          position: relative;
+          z-index: 1004;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: $tpRtLt;
+          height: $hamHgt;
+          background-color: $green;
+          border-radius: ($hamHgt / 2) 0 ($hamHgt / 2) ($hamHgt / 2);
+
+          .hamLine {
+            transition: all 0.2s ease-in-out;
+          }
+        }
+
+        .hamCollapsed {
+
+
+          &+.dropDownMenu {
+            transform: translateX(100vw)
+          }
+
+        }
+
+        .hamShown {
+
+          .hamSvg #Line_2 {
+            transform: translateY(27px) translateX(8px)rotate(-45deg);
+            transform-origin: -20 px;
+          }
+
+          .hamSvg #Line_1 {
+            transform: rotate(-45deg);
+            opacity: 0;
+          }
+
+          .hamSvg #Line_3 {
+            transform: translateY(-9px) translateX(3px) rotate(45deg);
+            transform-origin: -15px;
+          }
+
+          &+.dropDownMenu {
+            transform: translateX(-100vw);
+
+          }
+
+        }
+
+
+      }

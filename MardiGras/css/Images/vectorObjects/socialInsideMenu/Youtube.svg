@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Youtube" transform="translate(-0.041 -36)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-1" cx="23" cy="23" r="23" transform="translate(0.041 36)"/>
+    <path id="_008-youtube" data-name="008-youtube" class="cls-2" d="M28.409,3.178A3.634,3.634,0,0,0,25.852.621C23.582,0,14.5,0,14.5,0S5.424,0,3.154.6A3.708,3.708,0,0,0,.6,3.178,38.29,38.29,0,0,0,0,10.155a38.15,38.15,0,0,0,.6,6.977,3.634,3.634,0,0,0,2.557,2.557c2.294.621,11.349.621,11.349.621s9.079,0,11.349-.6a3.634,3.634,0,0,0,2.557-2.556,38.3,38.3,0,0,0,.6-6.977,36.347,36.347,0,0,0-.6-7ZM11.612,14.5v-8.7l7.55,4.348Zm0,0" transform="translate(12.887 73.503) rotate(-90)"/>
+  </g>
+</svg>

@@ -1,0 +1,63 @@
+.lgCards {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+
+  &.displayed {
+    display: block;
+
+    .card.displayed {
+      opacity: 1;
+    }
+  }
+
+  .card {
+    position: absolute;
+    margin-top: 12vh;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      .buttonLabel {
+        text-align: center;
+      }
+
+      p {
+        display: none;
+      }
+
+      .label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 1rem;
+      }
+    }
+    .escRow {
+      display: flex;
+      flex-direction: row-reverse;
+      background-color: darken($light, 30%);
+      border-bottom: 1px solid $bgDark;
+
+      .escElement {
+        img {
+          display: block;
+          width: $calibSm;
+          height: $calibSm;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

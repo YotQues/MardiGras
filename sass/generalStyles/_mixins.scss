@@ -1,0 +1,114 @@
+// mediaQueries
+/* -------------------------------------------------------------------------- */
+
+// min size
+@mixin xxsBP {
+  @media (max-width: 374px) {
+    @content;
+  }
+}
+
+//portrait smartphones
+@mixin xsBP {
+  @media (min-width: 375px) {
+    @content;
+  }
+}
+
+@mixin xsBPWlimit {
+  @media (min-width: 375px) and (max-width: 576px) {
+    @content;
+  }
+}
+
+// landscape phones etc.
+@mixin smBP {
+  @media (min-width: 576px){
+    @content;
+  }
+}
+
+// tablets etc.
+@mixin tbBP {
+  @media (min-width: 768px) and (min-height:500px) {
+    @content;
+  }
+}
+
+// samll desktops
+@mixin smDskBP {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+// large desktops
+@mixin lgDskBP {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// ---------- --------- //
+
+@mixin showOnDskBlk {
+  display: none;
+
+  @include smDskBP {
+    display: block;
+  }
+}
+
+@mixin showOnDskGrd {
+  display: none;
+
+  @include smDskBP {
+    display: grid;
+  }
+}
+
+@mixin showOnDskFlx {
+  display: none;
+
+  @include smDskBP {
+    display: flex;
+  }
+}
+
+// Font Styling
+@mixin h2 {
+  font-size: 19px;
+  color: #fff;
+  margin-left: 22px;
+}
+
+@mixin h3 {
+  font-size: 19px;
+  line-height: 1.7;
+  text-align: left;
+  padding-left: 5px;
+  color: inherit;
+  font-family: 'Pattaya',
+    sans-serif;
+}
+
+@mixin loginTxSyle {
+  font-size: 19px;
+  line-height: 1.7;
+  text-align: left;
+  padding-left: $radiusSm;
+  color: inherit;
+  font-family: inherit;
+}
+
+@mixin chain {
+
+  width: $calibSm;
+  z-index: 1004;
+
+  .chainObject {
+    width: $calibSm;
+    height: $calibSm;
+    border-radius: $radiusSm;
+  }
+}

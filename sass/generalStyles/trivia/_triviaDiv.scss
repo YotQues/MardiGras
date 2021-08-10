@@ -1,0 +1,69 @@
+.triviaDiv {
+  z-index: 1005;
+  border-radius: $radiusSm 0 0 $radiusSm;
+  background-color: $yellow;
+  grid-area: lnSel;
+  width: fit-content;
+
+  .rCnrFllStrp {
+    width: 25.35vw;
+    height: $calibSm;
+    background-color: #fff;
+    border-radius: $radiusSm 0 0 $radiusSm;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: flex-start;
+    background-color: lighten($ltBlue, 20%);
+
+    .secStrip {
+      width: fit-content;
+      border-radius: $radiusSm 0 0 $radiusSm;
+
+      #triviaActivate {
+        height: $calibSm;
+        width: 76px;
+        border: none;
+        font-family: inherit;
+        font-size: 1.4em;
+        color: inherit;
+        line-height: 1;
+        padding-left: $radiusSm;
+        height: $calibSm;
+        border-radius: $radiusSm 0 0 $radiusSm;
+        background-image: linear-gradient(to right, $danger, $yellow);
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          color: $purple;
+          text-shadow: 0 0 8px #fff;
+        }
+        a {
+          display: inline-block;
+          // margin-right: 20px;
+          // background-color: $yellow;
+          font-size: 1em;
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+}
+
+@include smDskBP {
+  .triviaDiv {
+    grid-area: lnSel;
+    width: fit-content;
+
+    .rCnrFllStrp {
+      .secStrip {
+        width: 12vw;
+        height: $calibSm;
+        border-radius: $radiusSm 0 0 $radiusSm;
+        // z-index: 100-1;
+        background-color: lighten($yellow, 20%);
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: flex-start;
+      }
+    }
+  }
+}

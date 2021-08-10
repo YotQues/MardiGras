@@ -1,0 +1,10 @@
+.gal {
+  display: flex;
+  flex-direction: column-reverse;
+
+  @import "galleryPicsSm";
+
+  @import "galleryPicslG";
+
+  @import "smVids";
+}

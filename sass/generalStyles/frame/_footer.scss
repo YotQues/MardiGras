@@ -1,0 +1,135 @@
+.footerMobile {
+  // grid-area: footer;
+  width: 100vw;
+  height: 1vh;
+  position: static;
+  bottom: 0;
+  margin-top: 15px;
+
+  .socialDiv {
+
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "follow . soc";
+    align-items: center;
+    background: $bgFooter;
+    background: linear-gradient(0deg, $bgFooter 50%, rgba(242, 183, 5, 0) 50%);
+
+    @include smDskBP {
+      display: none;
+    }
+
+    & * {
+      display: block;
+    }
+
+    h3 {
+      grid-area: follow;
+      @include h3;
+      justify-self: flex-start;
+      width: 128px;
+      height: $calibMd;
+      margin: 0;
+      margin-right: 3%;
+      border-radius: 0 $radiusMd $radiusMd 0;
+      font-family: 'Pattaya', sans-serif;
+      font-size: 1.6rem;
+      line-height: 1.8;
+      color: $light;
+      background-color: $yellow;
+
+      @include xxsBP {
+        width: 80px;
+        height: $calibSm;
+        border-radius: 0 $radiusSm $radiusSm 0;
+        font-size: 1rem;
+        line-height: 1.9;
+        padding-left: 2px;
+      }
+
+      svg {
+        width: 0.3em;
+        display: inline-block;
+      }
+
+    }
+
+    .socContain {
+
+      grid-area: soc;
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: repeat(5, 1fr);
+      margin-bottom: 0;
+
+      li {
+
+        margin: {
+          left: 3%;
+        }
+
+        ;
+
+        &:last-Child {
+          margin-right: 3%;
+        }
+
+        width: fit-content;
+
+        a {
+          width: fit-content;
+
+          img {
+            display: inline;
+
+            @include xxsBP {
+              width: $calibSm;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .footerBox {
+    background-color: $bgFooter;
+    position: relative;
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+    min-height: 1vh;
+    height: calc(100% - $calibMd);
+
+    padding: {
+      top: $radiusMd / 2;
+      bottom: 0.2em;
+    }
+
+    ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .disclaimer {
+      text-align: center;
+      line-height: 1.5;
+      font-size: 0.6rem;
+    }
+
+    @include smDskBP {
+      height: 6vh;
+
+      .disclaimer {
+        line-height: 0.5;
+        font-size: 1em;
+      }
+    }
+  }
+
+  @include smDskBP {
+    margin-top: $calibSm;
+  }
+}

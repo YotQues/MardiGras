@@ -1,0 +1,209 @@
+.topLeftCorner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1004;
+      height: 60px;
+      overflow: visible;
+      display: grid;
+      grid-template-columns: $calibSm auto;
+      grid-template-rows: repeat(2, 30px) auto;
+      grid-template-areas:
+        "logo logo"
+        "logo logo"
+        "chainL ."
+      ;
+      transition: all 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+      @include smDskBP {
+        transform: translateY($calibSm)translateX($calibSm);
+        grid-template-columns: $calibSm auto auto auto;
+        grid-template-rows: repeat(3, $calibSm) auto;
+        grid-template-areas:
+          "cross soc soc soc"
+          "ver logo logo logo"
+          ". logo logo logo"
+          ". chainL . ."
+        ;
+
+        .crossL {
+          grid-area: cross;
+        }
+
+        .deskSoc {
+          grid-area: soc;
+        }
+
+        .lVertStrp {
+          grid-area: ver;
+        }
+
+        .logoBox {
+          grid-area: logo;
+        }
+
+        .chainL {
+          grid-area: chainL;
+        }
+      }
+
+      .crossL {
+        @include showOnDskBlk;
+        content: "";
+        width: $calibSm;
+        height: $calibSm;
+        background: linear-gradient(45deg, $purple 49.5%, $yellow 50%);
+        display: none;
+      }
+
+      .deskSoc {
+        @include showOnDskFlx;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: $calibSm;
+        border-radius: 0 $radiusSm $radiusSm 0;
+        display: none;
+        background: lighten($green, 10%);
+
+        .horStripL {
+          width: 15vw;
+          height: $calibSm;
+          background: $yellow;
+          border-radius: 0 $radiusSm $radiusSm 0;
+
+        }
+
+        .dskSocUl {
+          margin-bottom: 0;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          grid-template-rows: auto;
+          align-items: center;
+          justify-items: space-evenly;
+
+          .socItem {
+            transform: rotate(90deg) scale(0.7);
+            line-height: 1;
+
+            a {
+              img {
+                transition: all 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+              }
+            }
+
+            &:hover {
+              a {
+                img {
+                  // cursor: pointer;
+                  filter: invert(52%) sepia(96%) saturate(1179%) hue-rotate(15deg) brightness(118%) contrast(96%);
+
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .lVertStrp {
+        @include showOnDskBlk;
+        height: 15vh;
+        border-radius: 0 0 $radiusSm $radiusSm;
+        background-image: linear-gradient(180deg, $purple 0%, $purple 60%, $ltBlue 100%);
+
+        display: none;
+
+      }
+
+
+      .logoBox {
+        grid-area: logo;
+        z-index: 1003;
+        width: 188px;
+        height: $calibLg;
+        background-color: #E4002B;
+        border-radius: 0 $radiusLg $radiusLg $radiusLg;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.5s ease-out;
+
+        .logo {
+          width: 170px;
+        }
+
+        .chainHrzntl {
+          @include showOnDskBlk;
+          display: none;
+        }
+      }
+
+      .chainL {
+        @include chain;
+        height: $calibSm * 5;
+        grid-area: chainL;
+        transform: translateY(-($calibSm * 1.5));
+        z-index: 1002;
+        transition: transform 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+        .chainOb1 {
+          background-color: $brightGreen;
+        }
+
+        .chainOb2 {
+          background-color: $ltBlue
+        }
+
+        .chainOb3 {
+          background-color: $yellow;
+        }
+
+        .chainOb4 {
+          background-color: $danger;
+        }
+
+        .chainOb5 {
+          background-color: $green;
+        }
+
+        .chainOb6 {
+          background-color: $purple;
+        }
+
+      }
+    }
+
+    .topLeftCorner.notCollapsed {
+
+      .chainL {
+        transform: translateX(-30px) translateY(-($calibSm * 1.5));
+      }
+
+      height: $calibLg;
+    }
+
+    .topLeftCorner.notScrolled {
+      .logoBox {
+        transform: translate(0, 0) scale(1);
+        transform-origin: top left;
+      }
+    }
+
+    .topLeftCorner.isScrolled {
+
+
+      .chainL {
+        transform: translateX(-30px) translateY(-($calibSm * 1.5));
+      }
+
+      @include smDskBP {
+        transform: translate(0);
+
+        .chainL {
+          transform: translateX(0) translateY(-($calibSm * 1.5));
+          ;
+        }
+
+      }
+    }

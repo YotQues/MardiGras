@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Facebook" transform="translate(7.5 -150.218)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" class="cls-1" cx="23" cy="23" r="23" transform="translate(-7.5 150.218)"/>
+    <g id="facebook-app-symbol" transform="translate(2.54 179.947) rotate(-90)">
+      <path id="f_1_" class="cls-2" d="M8.737,25.92V14.1H12.7l.6-4.609H8.737V6.547c0-1.334.369-2.243,2.284-2.243h2.438V.18A33.064,33.064,0,0,0,9.905,0C6.387,0,3.979,2.147,3.979,6.09v3.4H0V14.1H3.979V25.92Z" transform="translate(0 0)"/>
+    </g>
+  </g>
+</svg>

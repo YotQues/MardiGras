@@ -1,0 +1,50 @@
+#about {
+  .seperator {
+    height: fit-content;
+    margin-top: 12px;
+    margin-bottom: 0;
+    .secHeader {
+      width: fit-content;
+      padding-left: 12px;
+      padding-right: 12px;
+      border-radius: 0 $radiusSm $radiusSm $radiusSm;
+    }
+    .horChain {
+      overflow: hidden;
+    }
+    &#innerSep {
+      width: 100vw;
+      display: flex;
+      justify-content: flex-end;
+      margin: 2px 0;
+      .horChain {
+        display: flex;
+        width: fit-content;
+      }
+      .fChain {
+        display: none;
+      }
+    }
+    &#sepMayor {
+      .horChain {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    padding: {
+      left: $radiusSm;
+      right: $radiusSm;
+    }
+    img#mayor {
+      width: 25vw;
+      margin-left: 12px;
+      margin-top: -$calibSm;
+      margin-bottom: 24px;
+      float: right;
+    }
+  }
+
+  @import "aboutQueries";
+}

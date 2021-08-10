@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+// :root {
+//   // font-family: Roboto, sans-serif;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Pattaya", sans-serif;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: Roboto, sans-serif;
+  background-color: $bgDark;
+
+  overflow: {
+    x: overlay;
+    y: scroll;
+  }
+
+  .seperator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: $calibMd;
+    // z-index: calc(inherit + 1);
+
+    margin: {
+      top: $radiusSm;
+      bottom: -$radiusMd;
+    }
+
+    .secHeader {
+      @include h3;
+      justify-self: flex-start;
+      width: 104px;
+      height: $calibSm;
+      margin: 0;
+      margin-right: 3%;
+      border-radius: 0 $radiusMd $radiusMd 0;
+      font-family: "Pattaya", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      font-size: 1.5rem;
+      color: $light;
+      background-color: $yellow;
+      padding-left: 0.5em;
+      // z-index: 1;
+
+      @include xxsBP {
+        width: 80px;
+        border-radius: 0 $radiusSm $radiusSm 0;
+        font-size: 1rem;
+        line-height: 1.9;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.pointOnHover:hover {
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-clip: content-box;
+  transition: all 0.2s ease-in-out;
+  // display: none;
+}
+
+body::-webkit-scrollbar-track-piece {
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: lighten($bgDark, 30%);
+}
+
+body::-webkit-scrollbar {
+  width: 0.7em;
+  background: transparent;
+  // z-index: -1;
+  display: none;
+}
+
+.boxShadow-btm-2 {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}

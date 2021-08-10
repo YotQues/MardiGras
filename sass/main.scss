@@ -1,0 +1,40 @@
+/* ----------------------------- general styles ----------------------------- */
+
+/* color and length variables */
+@import "generalStyles/colorsAndLengthVars";
+
+/* fonts */
+@import "generalStyles/fonts";
+
+/* mixins */
+@import "generalStyles/mixins";
+
+/* General */
+@import "generalStyles/general";
+
+/* Frame */
+@import "generalStyles/frame";
+
+/* Timer */
+@import "index/timer";
+
+/* ---------------------------------- index --------------------------------- */
+
+@import "index/index";
+
+/* ---------------------------------- about --------------------------------- */
+
+@import "about/about";
+
+/* ---------------------------------- media --------------------------------- */
+@import "media/gallery";
+
+/* ----------------------------------- faq ---------------------------------- */
+
+@import "faq/faq"; /* --------------------------------- contact -------------------------------- */
+
+@import "contact/contact";
+
+/* --------------------------------- trivia --------------------------------- */
+
+@import "trivia/trivia";

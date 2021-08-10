@@ -1,0 +1,77 @@
+.galleryPicsLg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+
+  .galItemLg {
+    position: absolute;
+    top: 0;
+    margin: 30vh 2.5vw;
+    width: 95vw;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+
+    .escRow {
+      display: flex;
+      flex-direction: row-reverse;
+      // background-color: darken($light, 30%);
+      border-bottom: 1px solid $bgDark;
+
+      .escElement {
+        img {
+          display: block;
+          width: $calibSm;
+          height: $calibSm;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    img {
+      width: inherit;
+      // border-radius: 1rem;
+    }
+
+    .crslCaption {
+      width: 60%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.5);
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      display: none;
+      position: absolute;
+      top: 75%;
+      margin: 0 auto;
+      padding-top: 8px;
+
+      p {
+        text-align: center;
+
+        a {
+          text-decoration: blue;
+        }
+      }
+    }
+  }
+
+  @import "galleryLgMedQueries";
+}
+
+.galleryPicsLg.displayed {
+  display: block;
+
+  .galItemLg.displayed {
+    opacity: 1;
+  }
+}
