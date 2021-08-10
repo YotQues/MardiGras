@@ -37,12 +37,20 @@
       left: $radiusSm;
       right: $radiusSm;
     }
-    img#mayor {
-      width: 25vw;
-      margin-left: 12px;
-      margin-top: -$calibSm;
-      margin-bottom: 24px;
-      float: right;
+    text-align: justify;
+    img {
+      margin-bottom: 0;
+      &#mayor {
+        width: 50vw;
+        margin-left: 12px;
+        margin-top: -$calibSm;
+        float: right;
+      }
+      &#masks {
+        width: 60vw;
+        margin-right: 12px;
+        float: left;
+      }
     }
   }
 

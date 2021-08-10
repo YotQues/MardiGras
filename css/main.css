@@ -1828,20 +1828,27 @@ div.topRightCorner.isScrolled.notCollapsed {
 #about p {
   padding-left: 15px;
   padding-right: 15px;
+  text-align: justify;
+}
+
+#about p img {
+  margin-bottom: 0;
 }
 
 #about p img#mayor {
-  width: 25vw;
+  width: 50vw;
   margin-left: 12px;
   margin-top: -30px;
-  margin-bottom: 24px;
   float: right;
 }
 
+#about p img#masks {
+  width: 60vw;
+  margin-right: 12px;
+  float: left;
+}
+
 @media (max-width: 374px) {
-  #about img#mayor {
-    width: 100%;
-  }
   #about .seperator .horChain {
     width: 136px;
   }
@@ -1869,6 +1876,12 @@ div.topRightCorner.isScrolled.notCollapsed {
     display: -ms-flexbox;
     display: flex;
   }
+  #about p img#masks {
+    width: 40vw;
+  }
+  #about p img#mayor {
+    width: 25vw;
+  }
 }
 
 @media (min-width: 768px) and (min-height: 500px) {
@@ -1887,7 +1900,16 @@ div.topRightCorner.isScrolled.notCollapsed {
     font-size: 1.32rem;
   }
   #about p img#mayor {
-    width: 16vw;
+    width: 20vw;
+  }
+  #about p img#masks {
+    width: 40vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  #about p img#masks {
+    width: 40vw;
   }
 }
 

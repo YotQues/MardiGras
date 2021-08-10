@@ -1,7 +1,4 @@
-
-
 // trivia quiz
-import { triviaQuestions } from '/modules/trivia/triviaQuestions.js'
 import quiz from './modules/trivia/trivia.js';
 quiz()
 

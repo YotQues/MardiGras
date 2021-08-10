@@ -1,7 +1,4 @@
 @include xxsBP {
-  img#mayor {
-    width: 100%;
-  }
   .seperator {
     .horChain {
       width: 136px;
@@ -26,6 +23,14 @@
       }
     }
   }
+  p {
+    img#masks {
+      width: 40vw;
+    }
+    img#mayor {
+      width: 25vw;
+    }
+  }
 }
 @include tbBP {
   .seperator#sepMayor {
@@ -43,7 +48,16 @@
   font-size: 1.32rem;
   p {
     img#mayor {
-      width: 16vw;
+      width: 20vw;
     }
+    img#masks {
+      width: 40vw;
+    }
+  }
+}
+
+@include lgDskBP{
+  p img#masks{
+    width: 40vw;
   }
 }
